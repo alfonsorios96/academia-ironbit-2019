@@ -1,1 +1,0 @@
-Oscar Raí Ahumada Pulgarón

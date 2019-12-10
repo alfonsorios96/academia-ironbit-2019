@@ -1,1 +1,0 @@
-Manuel Alfonso Rios Medellin
