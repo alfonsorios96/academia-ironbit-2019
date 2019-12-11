@@ -2821,6 +2821,29 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Profesor de Base"
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAFu8j+WixPqH4k=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Class1",
+					"ownedElements": [
+						{
+							"_type": "UMLDependency",
+							"_id": "AAAAAAFu8j+3zBR8Fzg=",
+							"_parent": {
+								"$ref": "AAAAAAFu8j+WixPqH4k="
+							},
+							"source": {
+								"$ref": "AAAAAAFu8j+WixPqH4k="
+							},
+							"target": {
+								"$ref": "AAAAAAFu8iI5Af1wFm8="
+							}
+						}
+					]
 				}
 			]
 		}
