@@ -7,13 +7,10 @@ class Escuela {
             new Empleado('Mar', 0, 30),
             new Empleado('Luis', 5, 0),
         ], writable: false});
-        Object.defineProperty(this, 'responsabilities', {value: ['Teach', 'Break', 'Meeting', 'Administrative Duties']});
+        Object.defineProperty(this, 'responsabilities', {value: ['Teach', 'Break', 'Meeting', 'Administrative Duties'], writable: false});
     }
 }
 
-
-
 const miEscuela = new Escuela();
-
 
 miEscuela.teachers.forEach(empleado => console.log(empleado.isBusy()));
