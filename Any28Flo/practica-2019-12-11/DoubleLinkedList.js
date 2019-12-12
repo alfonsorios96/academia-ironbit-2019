@@ -29,4 +29,15 @@ class DoubleLinkedList {
     next(){
         this.currentNode = this.currentNode.next !== null ? this.currentNode.next : this.currentNode;
     }
+    delete(node_value){
+        const arrayNodes = new Array([...this.list]);
+        const toDropNode = arrayNodes[0].filter(node => node.data.name === node_value);
+        
+        if(toDropNode.length > 0) {
+            this.currentNode = toDropNode[0].prev;
+            this.currentNode.next = toDropNode[0].next;
+            this.currentNode.next.prev = this.currentNode;
+            this.list.delete(toDropNode[0]);
+        }
+    }
 }
