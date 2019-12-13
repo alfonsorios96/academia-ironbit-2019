@@ -70,7 +70,15 @@ class Task {
 
     let energie = food/3;
     let strong = food/3;
-    let fat = foo *1;
+    let fat = food *1;
+
+    if(food >3){
+      fat = foot*2;
+      energie = food /5;
+      strong = food /5;
+
+    }
+
   }
   Play (){
 
@@ -82,11 +90,17 @@ class Task {
   Read (){
 
   }
-  Walk(){
+  Walk(Distans, Time , Velocity){
+    if(Velocity >10){
+      
+    }
+    if (Distans >10){
+      
+    }
 
   }
 
-  Study (){
+  Study (HomeWork){
 
   }
 
