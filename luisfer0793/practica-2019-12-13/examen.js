@@ -11,8 +11,8 @@ const primes = (a, n) => {
                 divisores++;
             }
         }
-        return divisores === 2;
+return divisores === 2;
     });
 };
 
-console.log(primes(100, 200));
+console.log(primes(1, 200));
