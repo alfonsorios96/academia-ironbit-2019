@@ -41,9 +41,28 @@ constructor(){
 
   }
 
-  delete (data, prev=null, netx = null ){
+  remove (data, prev=null, netx = null ){
 
-    
+    const node = new Node (data);
+    node.prev = prev;
+    node.next = next;
+    if(prev !== null){
+      
+      prev.next = node;
+    }
+
+    if(next !== null){
+      next.prev = node;
+    }
+
+  this.currentNode = this.currentNode === null ? node : this.currentNode;
+  
+  this.list.delete(node);
+  if(node.prev !== null){
+      this.node = this.node.prev;
+  } else {
+      this.node = this.node.next
+  }
 
   }
 
