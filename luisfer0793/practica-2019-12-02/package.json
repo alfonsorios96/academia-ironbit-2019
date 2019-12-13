@@ -1,0 +1,13 @@
+{
+  "name": "netflix-clone",
+  "version": "1.0.0",
+  "description": "A project to simulate Netflix UI with CRUD methods.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Luis Fernando Jimenez Lopez",
+  "license": "ISC"
+}
