@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  word-spacing: .1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 1.5rem 2.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+
+.main {
+  position: relative;
+  height: 85vh;
+}
+
+.main__box {
+  display: -ms-grid;
+  display: grid;
+  padding: 3rem 5rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.main__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #E50914;
+  -webkit-transform: translate(-100%, 100%);
+          transform: translate(-100%, 100%);
+}
+
+.main__logo {
+  margin: 3rem 5rem;
+  height: 7rem;
+}
+
+.main__video {
+  max-width: 100%;
+}
+
+.main__video-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.main__video-rate {
+  display: block;
+  margin-top: 1rem;
+  height: 3rem;
+  width: 15rem;
+}
+
+.main__video-description {
+  margin-top: 5rem;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.main__video-description--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=styles.css.map */

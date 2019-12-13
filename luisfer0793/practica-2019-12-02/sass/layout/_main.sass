@@ -1,0 +1,36 @@
+.main
+    position: relative
+    height: 85vh
+    &__box
+        display: grid
+        padding: 3rem 5rem
+        grid-template-columns: repeat(2, 1fr)
+        justify-items: center
+    &__button
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 1
+        background-color: #E50914
+        transform: translate(-100%, 100%)
+    &__logo
+        margin: 3rem 5rem
+        height: 7rem
+    &__video
+        max-width: 100%
+        &-title
+            font-size: 4rem
+            font-weight: 700
+            color: white
+        &-rate
+            display: block
+            margin-top: 1rem
+            height: 3rem
+            width: 15rem
+        &-description
+            margin-top: 5rem
+            font-size: 1.4rem
+            color: white
+            &--box
+                display: flex
+                flex-direction: column
