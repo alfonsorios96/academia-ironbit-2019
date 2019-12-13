@@ -66,8 +66,11 @@ class Task {
     this.End = End;
   }
 
-  Feed (){
+  Feed (food ){
 
+    let energie = food/3;
+    let strong = food/3;
+    let fat = foo *1;
   }
   Play (){
 
