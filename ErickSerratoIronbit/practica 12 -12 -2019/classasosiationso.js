@@ -80,27 +80,29 @@ class Task {
     }
 
   }
-  Play (){
+  Play (Task){
 
   }
-  Work (){
+  Work (Task){
 
   }
 
-  Read (){
+  Read (Task){
 
   }
-  Walk(Distans, Time , Velocity){
+  Walk(Distans, Time , Velocity, Task){
     if(Velocity >10){
       
     }
     if (Distans >10){
-      
+
     }
 
   }
 
-  Study (HomeWork){
+  Study (Task){
+    let Task = new Task();
+
 
   }
 
