@@ -47,8 +47,6 @@ const printUsers = jsonData =>{
             html+= `  <a href="#" class="btn btn-primary">Delete</a>`
             html += `</div>`
            html += `</div>`
-        //  });
-
     }
     userContainer.innerHTML =html ; 
 }
