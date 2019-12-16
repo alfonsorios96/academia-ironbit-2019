@@ -1,35 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Neflix Clone</title>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="js/funtions.js">
+    <title>Neflix Clone</title>
+  </head>
+  <body>
+    <div class="headernetflix">
+      <img src="image/NTFX.png" class="logo" >
+      <div class="headernetflix-right">
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Iniciar Sesión</button>
+      </div>
+      
 
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="js/funciones.js">
-</head>
-<body>
-  <div class="header">
-    <img src="image/i1.jpg" class="logo" >
-    <div class="header-right">
-      <a class="active" href="#">Iniciar Sesión</a>
     </div>
-  </div>
-<div>
-  <div class = "tittle1">
-    <h3>
-      Programas y titulos sin limites y mucho más.
-    </h3>
-  </div>
-  <div class="tittle2">
-    <h5>
-      Disfruta donde quieras. Cancela en cualquier momento.
-    </h5>
-  </div>
-  <div class="buttonindex">
-    <a class="active" href="#">Obtenerlo Ahora</a>
-  </div>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
-</div>
+        <div class="modalnetflix-contentnetflix">
+          <div class="modal-header">
+           
+            <h4 class="modalnetflix-titlenetflix">Iniciar Sesión</h4>
+          </div>
+          <div class="modal-body">
+            <form action="netflix.html">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo electrónico con nadie más.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+              </div>
 
-</body>
+              <div>
+                <button type="submit" class="btn btn-danger" value="Submit"> Iniciar Sesión</button>
+              </div>
+             
+              
+              
+            </form>
+          </div>
 
+        </div>
+
+      </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  </body>
 </html>
