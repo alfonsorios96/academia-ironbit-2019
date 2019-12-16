@@ -1,36 +1,37 @@
-
 const supportmessage = (distan) =>{
-
   let message;
-  
-
-if(distan ===0 ){
-  message = {message1 :'Starting Line... Good Luck!'}
+if(distan <0){
+  message = {message1 :'Error, distans its negative'}
 }else{
-  if( distan > 0  && distan <=2.40){
-    message = {Swim  : distan }
+  if(distan ===0 ){
+    message = {message1 :'Starting Line... Good Luck!'}
   }else{
-    if( distan > 2.40  && distan <114.4){
-      message = {Bike  : distan }
-
+    if( distan > 0  && distan <=2.40){
+      message = {Swim  : distan }
     }else{
-      if(distan >114.4 && distan < 140.6){
-
-        if(distan >130.4 && distan < 140.6)
-        {
-          message = {Run  : 'Nearly there!' }
-        }else{
-          message = {Run  : distan }
-        }  
+      if( distan > 2.40  && distan <114.4){
+        message = {Bike  : distan }
+  
       }else{
-        message = {message2 :'Distance out of range youre done'}
+        if(distan >114.4 && distan < 140.6){
+  
+          if(distan >130.4 && distan < 140.6)
+          {
+            message = {Run  : 'Nearly there!' }
+          }else{
+            message = {Run  : distan }
+          }  
+        }else{
+         if(distan === 140.6){
+          message = {message2 :'Youre done! Stop running!'}
+         }else{
+          message = {message2 :'Distance out of range youre done'}
+         }
+        }
       }
     }
   }
 }
-
-
 return message;
-
 }
 
