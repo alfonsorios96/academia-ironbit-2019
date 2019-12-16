@@ -81,13 +81,22 @@ class Task {
 
   }
   Play (Task){
+    Task = new Task();
+    Task.Star();
+    Task.End();
 
   }
   Work (Task){
+    Task = new Task();
+    Task.Star();
+    Task.End();
 
   }
 
   Read (Task){
+    Task = new Task();
+    Task.Star();
+    Task.End();
 
   }
   Walk(Distans, Time , Velocity, Task){
@@ -101,8 +110,9 @@ class Task {
   }
 
   Study (Task){
-    let Task = new Task();
-
+    Task = new Task();
+    Task.Star();
+    Task.End();
 
   }
 
