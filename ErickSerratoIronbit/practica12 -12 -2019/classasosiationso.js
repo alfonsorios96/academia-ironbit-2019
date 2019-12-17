@@ -71,6 +71,7 @@ class Task {
     let energie = food/3;
     let strong = food/3;
     let fat = food *1;
+    let parametro = [];
 
     if(food >3){
       fat = foot*2;
@@ -79,12 +80,15 @@ class Task {
 
     }
 
+    parametro = parametro.push(fat,energie,strong);
+    return parametro;
+    
+
   }
   Play (Task){
     Task = new Task();
     Task.Star();
     Task.End();
-
   }
   Work (Task){
     Task = new Task();
@@ -100,12 +104,21 @@ class Task {
 
   }
   Walk(Distans, Time , Velocity, Task){
-    if(Velocity >10){
-      
-    }
-    if (Distans >10){
+    let message =  new Object ();
 
+    if (Velocity <0){
+      message = { mesasge: 'Error distnas negative'}
+    }else{
+
+      if(Velocity >10){
+      
+        message = { mesasge: 'you are walking'}
+  
+      }else{
+        message = { mesasge: 'you are run'}
+      }
     }
+    return  message;
 
   }
 
@@ -113,7 +126,6 @@ class Task {
     Task = new Task();
     Task.Star();
     Task.End();
-
   }
 
   
