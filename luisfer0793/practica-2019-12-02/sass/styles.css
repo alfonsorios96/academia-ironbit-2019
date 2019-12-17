@@ -14,10 +14,16 @@
 
 html {
   font-size: 62.5%;
+}
+
+body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.02rem;
   word-spacing: .1rem;
+  color: #0b1015;
+  background-color: #f2f3f4;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,9 +40,53 @@ p {
   padding: 1.5rem 2.5rem;
   text-transform: uppercase;
   cursor: pointer;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 1rem;
+}
+
+.button--red {
+  background-color: #ff4262;
+}
+
+.carousel--title {
+  padding: 3rem 5rem;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.movie {
+  border: 0.1rem solid #c2c2c2;
+}
+
+.movie__img {
+  display: block;
+  width: 100%;
+}
+
+.movie__title, .movie__description {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.movie__description {
+  font-size: 1.4rem;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 5rem;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 
 .main {
@@ -75,7 +125,6 @@ p {
 .main__video-title {
   font-size: 4rem;
   font-weight: 700;
-  color: white;
 }
 
 .main__video-rate {
@@ -88,7 +137,6 @@ p {
 .main__video-description {
   margin-top: 5rem;
   font-size: 1.4rem;
-  color: white;
 }
 
 .main__video-description--box {

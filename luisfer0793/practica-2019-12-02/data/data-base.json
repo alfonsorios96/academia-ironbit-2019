@@ -1,0 +1,32 @@
+{
+    "movies": [
+        {
+            "id": 0,
+            "title": "Leon, the Professional",
+            "description": "Mathilda es una niña que no se lleva bien con su familia, excepto con su hermano pequeño. Su padre es un narcotraficante que hace negocios con Stan, un corrupto agente de la D.E.A. Un día Stan mata a su familia y Mathilda se refugia en casa de Léon, un solitario y misterioso vecino que resulta ser un asesino a sueldo, pero hará un pacto con él: ella se encargará de las tareas domésticas y le enseñará a leer a Léon y éste le enseñará a disparar para poder vengarse de la muerte de su hermano",
+            "year": 1994,
+            "poster": "https://m.media-amazon.com/images/M/MV5BZDAwYTlhMDEtNTg0OS00NDY2LWJjOWItNWY3YTZkM2UxYzUzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg"
+        },
+        {
+            "id": 1,
+            "title": "Last Tango in Paris",
+            "description": "Un hombre destrozado por el suicidio de su esposa intenta enterrar su dolor en una relación repentina, puramente carnal, con una fascinante desconocida.",
+            "year": 1972,
+            "poster": "https://upload.wikimedia.org/wikipedia/commons/9/95/Last_Tango_In_Paris.png"
+        },
+        {
+            "id": 2,
+            "title": "Lolita",
+            "description": "Versión de Adrian Lyne de la novela de Vladimir Nabokov, sobre el romance de un profesor maduro y una adolescente.",
+            "year": 1997,
+            "poster": "https://static.wixstatic.com/media/c1296a_aa485b1fd55445d29c70d82de662d64f~mv2_d_1920_2560_s_2.jpg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.png"
+        }
+    ],
+    "users": [
+        {
+            "id": 0,
+            "username": "admin",
+            "password": "admin"
+        }
+    ]
+}
