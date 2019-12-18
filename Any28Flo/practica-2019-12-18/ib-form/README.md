@@ -1,8 +1,8 @@
-![ib-employe-register-form screenshot](ib-employe-register-form.svg)
-# <ib-employe-register-form>
+![ib-form screenshot](ib-form.svg)
+# <ib-form>
 
 ![LitElement component](https://img.shields.io/badge/litElement-component-blue.svg)
-![Travis CI](https://travis-ci.org/github_username/ib-employe-register-form.svg?branch=master)
+![Travis CI](https://travis-ci.org/github_username/ib-form.svg?branch=master)
 
 > This is an example file with default selections.
 
@@ -10,7 +10,7 @@
 
 ```html
     <script type="module">
-        import '@catsys/ib-employe-register-form.js';
+        import '@catsys/ib-form.js';
     </script>
 ```
 

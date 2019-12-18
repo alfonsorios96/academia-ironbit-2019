@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit-element';
-import style from './ib-employe-register-form-styles.js';
+import style from './ib-form-styles.js';
+
 
 import '@vaadin/vaadin-text-field/vaadin-number-field.js';
 import '@vaadin/vaadin-text-field/vaadin-text-field.js';
@@ -8,11 +9,10 @@ import '@vaadin/vaadin-select/vaadin-select.js';
 import '@vaadin/vaadin-button/vaadin-button.js';
 import '@vaadin/vaadin-icons/vaadin-icons.js';
 
-
-class IbEmployeRegisterForm extends LitElement {
+class IbForm extends LitElement {
   static get properties() {
     return {
-  
+
     };
   }
 
@@ -27,7 +27,7 @@ class IbEmployeRegisterForm extends LitElement {
 
   render() {
     return html`
-      <vaadin-number-field id="numEmploye" label="Número de empleado: "></vaadin-number-field><br>
+    <vaadin-number-field id="numEmploye" label="Número de empleado: "></vaadin-number-field><br>
       <vaadin-text-field id="nameEmploye" label="Nombre(s):"></vaadin-text-field><br>
       <vaadin-text-field id="firstName" label="Apellido paterno:"></vaadin-text-field><br>
       <vaadin-text-field id="secondName" label="Apellido materno:"></vaadin-text-field><br>
@@ -67,6 +67,7 @@ class IbEmployeRegisterForm extends LitElement {
         </template>
       </vaadin-select><iron-icon icon="vaadin:plus-circle"></iron-icon><br>
       <vaadin-button theme="primary" @click="${this.handleClick}" >Agregar</vaadin-button>
+
       `;
     }
     handleClick(e) {
@@ -84,6 +85,8 @@ class IbEmployeRegisterForm extends LitElement {
         admisionDate : admisionDateNode.value 
 
       }
+      console.log(newEmploye)
+      
     }
     _getNode(query){
       return this.shadowRoot.querySelector(query);
@@ -91,4 +94,4 @@ class IbEmployeRegisterForm extends LitElement {
     }
 }
 
-window.customElements.define("ib-employe-register-form", IbEmployeRegisterForm);
+window.customElements.define("ib-form", IbForm);

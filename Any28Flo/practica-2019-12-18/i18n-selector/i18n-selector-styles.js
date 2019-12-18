@@ -11,7 +11,4 @@ export default css`
 *, *:before, *:after {
   box-sizing: inherit;
   font-family: inherit; }
-
-h2 {
-  color: red; }
 `;

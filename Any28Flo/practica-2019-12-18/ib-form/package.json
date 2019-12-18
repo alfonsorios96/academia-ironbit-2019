@@ -1,8 +1,8 @@
 {
-  "name": "@catsys/ib-employe-register-form",
+  "name": "@catsys/ib-form",
   "version": "1.0.0",
   "description": "Catsys component generated",
-  "main": "ib-employe-register-form.js",
+  "main": "ib-form.js",
   "keywords": [
     "lit-element",
     "component"
