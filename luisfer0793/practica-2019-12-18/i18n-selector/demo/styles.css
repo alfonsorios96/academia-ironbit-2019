@@ -1,0 +1,41 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.main__title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card {
+    text-align: center;
+    border: .1rem solid #c2c3c2;
+}
+
+.card__image {
+    width: 100%;
+}
+
+.card__description {
+    font-size: 1.4rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
