@@ -27,6 +27,7 @@ class IbForm extends LitElement {
 
   render() {
     return html`
+    <div>
     <vaadin-number-field id="numEmploye" label="Número de empleado: "></vaadin-number-field><br>
       <vaadin-text-field id="nameEmploye" label="Nombre(s):"></vaadin-text-field><br>
       <vaadin-text-field id="firstName" label="Apellido paterno:"></vaadin-text-field><br>
@@ -67,7 +68,8 @@ class IbForm extends LitElement {
         </template>
       </vaadin-select><iron-icon icon="vaadin:plus-circle"></iron-icon><br>
       <vaadin-button theme="primary" @click="${this.handleClick}" >Agregar</vaadin-button>
-
+    </div>
+    
       `;
     }
     handleClick(e) {

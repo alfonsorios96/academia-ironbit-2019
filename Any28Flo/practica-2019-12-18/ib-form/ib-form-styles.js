@@ -11,4 +11,10 @@ export default css`
 *, *:before, *:after {
   box-sizing: inherit;
   font-family: inherit; }
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 `;
