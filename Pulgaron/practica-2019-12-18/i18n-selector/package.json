@@ -1,8 +1,8 @@
 {
-  "name": "@catsys/ib-employee-register-form",
+  "name": "@catsys/i18n-selector",
   "version": "1.0.0",
   "description": "Catsys component generated",
-  "main": "ib-employee-register-form.js",
+  "main": "i18n-selector.js",
   "keywords": [
     "lit-element",
     "component"
@@ -14,15 +14,9 @@
     "test": "karma start"
   },
   "dependencies": {
-    "@polymer/paper-dialog": "^3.0.1",
     "@polymer/paper-toast": "^3.0.1",
     "@vaadin/vaadin-button": "^2.2.1",
-    "@vaadin/vaadin-date-picker": "^4.0.5",
-    "@vaadin/vaadin-dialog": "^2.2.1",
-    "@vaadin/vaadin-form-layout": "^2.1.6",
     "@vaadin/vaadin-select": "^2.1.6",
-    "@vaadin/vaadin-text-field": "^2.5.3",
-    "dile-modal": "^1.5.2",
     "lit-element": "^2.0.0"
   },
   "devDependencies": {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../i18n-selector.js';
+        import '@polymer/paper-toast/paper-toast.js';
+    </script>
+    <title>I18nSelector</title>
+</head>
+<body>
+    <i18n-selector></i18n-selector>
+    <paper-toast id="toast"></paper-toast>
+</body>
+<script>
+     const languages = {
+        'en': {'title': 'Here we have the title of the web page',
+                'bar': 'here we have the bar, the bar is small',
+                'menu': 'the menu is made of different things',
+                'footer': 'the footer is where the info goes'},
+        'es': {'titulo': 'Aqui tenemos el titulo de la pagina web',
+                'barra': 'Aqui tenemos la barra, la barra es pequeña',
+                'menú': 'el menú está hecho de diferentes cosas',
+                'pie de pagina': 'El pie de pagina es donde va la información'},
+        'fr': {'titre': 'Ici nous avons le titre du site',
+                'bar': 'Ici, nous avons le bar, le bar est petit',
+                'menu': 'le menu est composé de différentes choses',
+                'pied de page': 'Le pied de page est l endroit où l information va'
+        }
+    }
+    const translate = document.querySelector('i18n-selector')
+    translate.languages = languages;
+
+    translate.addEventListener('language-request', event => {
+                const toast = document.querySelector('#toast');
+                toast.text = Array.from(event.detail);
+                toast.open();
+            });
+</script>
+</html>
