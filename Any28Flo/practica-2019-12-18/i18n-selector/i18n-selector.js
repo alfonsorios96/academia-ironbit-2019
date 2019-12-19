@@ -4,7 +4,7 @@ import style from './i18n-selector-styles.js';
 class I18nSelector extends LitElement {
   static get properties() {
     return {
-      hello: { type: String }
+
     };
   }
 
@@ -14,13 +14,13 @@ class I18nSelector extends LitElement {
 
   constructor() {
     super();
-    this.hello = 'Hello';
   }
 
   render() {
     return html`
-        <p>Some static DOM</p>
-        <h2>${this.hello} i18n-selector</h2>
+      <div class="container">
+      
+      </div>
       `;
     }
 }

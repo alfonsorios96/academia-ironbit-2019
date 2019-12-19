@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../contact-card.js';
+    </script>
+    <title>ContactCard</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="card">
+        <contact-card></contact-card>
+        <script>
+            const node = document.querySelector('contact-card');
+            node.contact={
+                name:'Erika',
+                lastName : 'Flores',
+                phone : '7131020282',
+                gender : 'femile',
+                addres : '5 de mayo',
+                email : 'foglzerika@gmail.com',
+                nss : '6565656565',
+                bloodType : 'O+',
+                curp : 'FOGE921128MMCLNR09',
+                skills : ['litElement', 'javascript']
+            }
+        </script>
+    </div>
+</body>
+</html>
