@@ -21,18 +21,23 @@ class I18nSelector extends LitElement {
 
   render() {
     return html`
-        <vaadin-select id="lg" label="Idioma"  placeholder="Seleccionar">
+        <vaadin-select id="lg" label="Idioma" disabled placeholder="Seleccionar">
 					<template>
 						<vaadin-list-box>
 							<vaadin-item value="es">Español</vaadin-item>
 							<vaadin-item value="en">Inglés</vaadin-item>
 							<vaadin-item value="fr">Francés</vaadin-item>
 						</vaadin-list-box>
-          </template>
-          
+          </template>   
         </vaadin-select>
         <vaadin-button @click="${this.showLanguage}">Aceptar</vaadin-button>
       `;
+    }
+
+    showSelect(){
+      this.shadowRoot.whenDefined('vaadin-select').then(()=>{
+        this.shadowRoot.querySelector('#lg').removeAttribute('disabled');
+      })
     }
 
     showLanguage(){
