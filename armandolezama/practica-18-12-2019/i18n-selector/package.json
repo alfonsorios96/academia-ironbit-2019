@@ -1,5 +1,5 @@
 {
-  "name": "practica-2019-12-17",
+  "name": "i18n-selector",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vaadin/vaadin-text-field": "^2.5.3",
+    "@vaadin/vaadin-item": "^2.1.1",
+    "@vaadin/vaadin-list-box": "^1.2.0",
+    "@vaadin/vaadin-select": "^2.1.6",
     "lit-element": "^2.2.1"
   }
 }
