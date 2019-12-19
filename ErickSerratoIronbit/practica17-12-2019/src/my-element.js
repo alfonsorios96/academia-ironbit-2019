@@ -1,6 +1,7 @@
 import {LitElement, html, css } from 'lit-element';
 import '@vaadin/vaadin-text-field/vaadin-text-field';
 import '@polymer/paper-card/paper-card.js';
+import '@vaadin/vaadin-select/vaadin-select.js'
 
 class MyElement extends LitElement {
   static get properties () {
