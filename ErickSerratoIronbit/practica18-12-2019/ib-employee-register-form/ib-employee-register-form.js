@@ -8,7 +8,6 @@ import '@vaadin/vaadin-date-picker/vaadin-date-picker.js';
 class IbEmployeeRegisterForm extends LitElement {
   static get properties() {
     return {
-      hello: { type: String },
       tittle: {type: String }
     };
   }
@@ -20,7 +19,6 @@ class IbEmployeeRegisterForm extends LitElement {
 
   constructor() {
     super();
-    this.hello = 'Hello';
   }
 
   render() {
