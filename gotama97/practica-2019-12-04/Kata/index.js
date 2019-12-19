@@ -1,74 +1,31 @@
-    function findMissingLetter(array){
+(array)=>{
 
-        let arrayCap = [];
-        let arrayLow=[];
-        let position=0;
-        let missingLetter = "";
-
-        //MAPEANDO EL ARREGLO DE MAYUSCULAS
-        for(let i = 0;i<26;i++){
-            let letter = String.fromCharCode(i+65);
-            arrayCap[i]=letter;
-        }
-    //charCodeAt(number);
-        //MAPEANDO EL ARREGLO DE MINUSCULAS
-        for(let i = 0;i<26;i++){
-            let letter = String.fromCharCode(i+97);
-            arrayLow[i]=letter;
-        }
-
-        //CALLBACKS
-        const confirmation = (cur,idx)=>{
-            if(cur===array[0]){
-                position=idx;
-                return true;
-            }
-            return false;
-        }
-
-        const confirmationlow = (cur,idx)=>{
-            if(cur===array[0]){
-                position=idx;
-                return true;
-            }
-            return false;
-        }
-    
-    
-
-        if(arrayCap.some(confirmation)){
+        if(array.length>0&& array.every(item=>typeof item === 'string')){
+            let isCapital = false;
+            let capitalABC = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+            array[0] === array[0].toUpperCase() ? isCapital = true: isCapital = false;
             
-            let arrayComp = arrayCap.slice(position,(array.length+1+position));
-            //REALIZANDO LA COMPRACION DE LOS DOS ARREGLOS
-            console.log(arrayComp);
-            for (let i = 0; i < array.length; i++){
-                if(arrayComp[i] === array[i]){
-                    
-                } else{
-                    missingLetter = arrayComp[i];
-                    return missingLetter;
+            if(isCapital){
+                for(const letter in capitalABC){
+                capitalABC[letter] = capitalABC[letter].toUpperCase()
                 }
             }
-        }else if( arrayLow.some(confirmationlow)){
-            let arrayComp = arrayLow.slice(position,(array.length+1+position));
-            //REALIZANDO LA COMPRACION DE LOS ARRGLOS
-            console.log(arrayComp);
-            for (let i = 0; i < array.length; i++){
-                if(arrayComp[i] === array[i]){
-                
-                } else{
-                    missingLetter = arrayComp[i];
-                    return missingLetter;
+    
+            let from = capitalABC.indexOf(array[0])
+            let to = capitalABC.indexOf(array[array.length - 1])
+            let arrayForCompare = capitalABC.slice(from, to + 1)
+            let result = []
+    
+    
+            for(const letter of arrayForCompare){
+                if(array.indexOf(letter) < 0){
+                   result = [...result, letter]
                 }
-            }
+                }
+            return result.toString();
+        }else{
+            return 'Only character Arrays accepted';
         }
-
-
-        
-        console.log(missingLetter);
-    return missingLetter;
     }
 
-let array=["p","q","s","t"];
-
-console.log(findMissingLetter(array));
+    module.exports = findMissingLetter;
