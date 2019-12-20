@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit-element';
 import style from './phone-component-styles.js';
+import '@polymer/paper-card/paper-card.js';
 import '@catsys/battery-component';
 import '@catsys/player-component'
 class PhoneComponent extends LitElement {
@@ -20,8 +21,19 @@ class PhoneComponent extends LitElement {
 
   render() {
     return html`
-    <battery-component></battery-component>
-    <player-component></player-component>
+    <div class="container">
+    <paper-card>
+      <div class="card-content">
+        <battery-component></battery-component>
+        <player-component></player-component>
+      </div>
+      <div class="card-actions">
+        
+      </div>
+    </paper-card>
+      
+    </div>
+    
       `;
     }
 }
