@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit-element';
 import style from './phone-component-styles.js';
-
+import '@catsys/battery-component';
+        import '@catsys/player-component';
 class PhoneComponent extends LitElement {
   static get properties() {
     return {
@@ -19,8 +20,8 @@ class PhoneComponent extends LitElement {
 
   render() {
     return html`
-        <p>Some static DOM</p>
-        <h2>${this.hello} phone-component</h2>
+      <battery-component></battery-component>
+            <player-component></player-component>
       `;
     }
 }
