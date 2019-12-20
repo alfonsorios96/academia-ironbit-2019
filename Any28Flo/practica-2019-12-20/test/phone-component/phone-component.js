@@ -1,11 +1,11 @@
 import { html, LitElement } from 'lit-element';
 import style from './phone-component-styles.js';
 import '@catsys/battery-component';
-        import '@catsys/player-component';
+import '@catsys/player-component'
 class PhoneComponent extends LitElement {
   static get properties() {
     return {
-      hello: { type: String }
+      onCharge : Boolean
     };
   }
 
@@ -15,13 +15,13 @@ class PhoneComponent extends LitElement {
 
   constructor() {
     super();
-    this.hello = 'Hello';
+    this.onCharge = false
   }
 
   render() {
     return html`
-      <battery-component></battery-component>
-            <player-component></player-component>
+    <battery-component></battery-component>
+    <player-component></player-component>
       `;
     }
 }
