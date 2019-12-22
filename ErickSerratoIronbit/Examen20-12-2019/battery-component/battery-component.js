@@ -18,7 +18,7 @@ class BatteryComponent extends LitElement {
   constructor() {
     super();
 
-    this.charge = 20;
+    this.charge = 100;
     
 
   }
