@@ -74,7 +74,7 @@ class ContactList extends LitElement {
         }
         ${
           this._page === 'list' ?
-            html`<list-page class="page" active .contacts="${this.contacts}"></list-page>` :
+            html`<list-page class="page" active .pokemon="${this.pokemon}"></list-page>` :
             ''
         }
       </main>

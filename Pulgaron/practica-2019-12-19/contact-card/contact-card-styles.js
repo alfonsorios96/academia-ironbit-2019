@@ -13,5 +13,5 @@ export default css`
   font-family: inherit; }
 
 paper-card {
-  --paper-card-background-color: green; }
+  --paper-card-background-color: white; }
 `;

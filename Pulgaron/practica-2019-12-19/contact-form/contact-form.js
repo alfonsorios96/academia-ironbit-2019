@@ -9,7 +9,6 @@ class ContactForm extends LitElement {
   static get properties() {
     return {
       gendersCatalog: Array,
-        bloodTypeCatalog: Array
 
 
     };
@@ -31,87 +30,40 @@ class ContactForm extends LitElement {
         value: 'F'
       }
     ]
-
-    this.bloodTypeCatalog = [
-      {
-        label: '-O',
-        value: '-O'
-      },
-      {
-        label: '+O',
-        value: '+O'
-      },
-      {
-        label: '-A',
-        value: '-A'
-      },
-      {
-        label: '+A',
-        value: '+A'
-      },
-    ]
   }
 
   render() {
     return html`
+        <vaadin-text-field id="sprite" placeholder="Sprite" label="Sprite"></vaadin-text-field>
+        <vaadin-text-field id="id" placeholder="Id" label="Id"></vaadin-text-field>
+        <vaadin-text-field id="name" placeholder="Nombre" label="Nombre"></vaadin-text-field>
+        <vaadin-combo-box id="gender" .items="${this.gendersCatalog}" placeholder="Sexo" label="Sexo"> </vaadin-combo-box>
+        <vaadin-text-field id="experience" placeholder="Experiencia" label="Experiencia"></vaadin-text-field>
+        <vaadin-text-field id="height" placeholder="Altura" label="Altura"></vaadin-text-field>
+        <vaadin-text-field id="weight" placeholder="Peso" label="Peso"></vaadin-text-field>
 
-          <vaadin-text-field id="name"></vaadin-text-field>
-          <vaadin-text-field id="lastName"></vaadin-text-field>
-          <vaadin-combo-box id="gender" .items="${this.gendersCatalog}" placeholder="Sexo" label="Sexo"> </vaadin-combo-box>
-          <vaadin-text-field id="nss"></vaadin-text-field>
-          <vaadin-combo-box id="bloodType" .items="${this.bloodTypeCatalog}"></vaadin-combo-box>
-          <vaadin-text-field id="phone"></vaadin-text-field>
-          <vaadin-text-field id="address"></vaadin-text-field>
-          <vaadin-text-field id="email"></vaadin-text-field>
-          <vaadin-text-field id="curp"></vaadin-text-field>
-          <vaadin-text-field id="rfc"></vaadin-text-field>
-          <vaadin-button @click="${this.addSkill}">Nueva habiilidad</vaadin-button>
-          <div class="container skills" id="skillsContainer">
-
-          </div>
-          <vaadin-button @click="${this.saveContact()}"></vaadin-button>
-
-
+          <vaadin-button @click="${this.savePokemon}">Salvar</vaadin-button>
       `;
     }
 
-    addSkill(){
-    const container = this.shadowRoot.querySelector('#skillsContainer');
-    container.innerHTML += `<vaadin-text-field class="skill"></vaadin-text-field>`
-    }
-
-    saveContact(){
+    savePokemon(){
+      const sprite = this.shadowRoot.querySelector('#sprite');
+      const id = this.shadowRoot.querySelector('#id');
       const name = this.shadowRoot.querySelector('#name');
-      const lastName = this.shadowRoot.querySelector('#lastName');
       const gender = this.shadowRoot.querySelector('#gender');
-      const nss = this.shadowRoot.querySelector('#nss');
-      const bloodType = this.shadowRoot.querySelector('#bloodType');
-      const phone = this.shadowRoot.querySelector('#phone');
-      const address = this.shadowRoot.querySelector('#address');
-      const email = this.shadowRoot.querySelector('#email');
-      const curp = this.shadowRoot.querySelector('#curp');
-      const rfc = this.shadowRoot.querySelector('#rfc');
+      const experience = this.shadowRoot.querySelector('#experience');
+      const height = this.shadowRoot.querySelector('#height');
+      const weight = this.shadowRoot.querySelector('#weight');
 
-      const skills = this.shadowRoot.querySelectorAll('.skill');
-      const newSkills = [];
-      for(const skill of  skills){
-        newSkills.push(skill.value);
-        skill.parentNode.removeChild(skill);
-      }
-
-      this.dispatchEvent(new CustomEvent('register-contact-request',{
+      this.dispatchEvent(new CustomEvent('register-pokemon-request',{
         detail: {
+          sprite: sprite.value,
+          id: id.value,
           name: name.value,
-          lastName: lastName.value,
           gender: gender.value,
-          nss: nss.value,
-          bloodType: bloodType.value,
-          phone: phone.value,
-          address: address.value,
-          email: email.value,
-          curp: curp.value,
-          rfc: rfc.value,
-          skills: newSkills.value
+          experience: experience.value,
+          height: height.value,
+          weight: weight.value
         }
       }))
 

@@ -1,11 +1,11 @@
 import { html, LitElement } from 'lit-element';
 import style from './contact-card-styles.js';
-import '@polymer/paper-card';
+
 
 class ContactCard extends LitElement {
   static get properties() {
     return {
-      contact: Object
+      pokemon: Object
     };
   }
 
@@ -15,26 +15,22 @@ class ContactCard extends LitElement {
 
   constructor() {
     super();
-    this.contact = {};
+    this.pokemon = {};
   }
+
+
 
   render() {
     return html`
-        <paper-card heading="${this.contact.name}" image="${this.contact.image}" alt="Emmental">
-          <div class="card-content">
+        <paper-card heading="${this.pokemon.name}" image="${this.pokemon.sprites.front_default}">
+   <div class="card-content">
             <ul>
-              <li>${this.contact.lastName}</li>
-              <li>${this.contact.phone}</li>
-              <li>${this.contact.gender}</li>
-              <li>${this.contact.address}</li>
-              <li>${this.contact.email}</li>
-              <li>${this.contact.nss}</li>
-              <li>${this.contact.rfc}</li>
-              <li>${this.contact.bloodType}</li>
-              <li>${this.contact.curp}</li>
+              <li>${this.pokemon.height}</li>
+              <li>${this.pokemon.experience}</li>
+              <li>${this.pokemon.id}</li>
+              <li>${this.pokemon.weight}</li>
             </ul>
           </div>
-
         </paper-card>
         `
     }

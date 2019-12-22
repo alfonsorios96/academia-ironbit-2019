@@ -5,16 +5,16 @@ class Human{
         this.gender = gender
     }
 
-    eat(){
-       
+    getWeight(){
+       return this.weight;
     }
 
-    sleep(){
-
+    getHeight(){
+        return this.height;
     }
 
-    talk(){
-
+    getGender(){
+        return this.gender;
     }
 }
 
@@ -22,20 +22,21 @@ class Student extends Human{
     constructor(name, lastName, id){
         super();
         this.name = name;
-        this.lastName = this.lastName;
+        this.lastName = lastName;
         this.id = id;
     }
 
-    study(){
-
+    getName(){
+        return this.name;
     }
 
-    goToSchool(){
-
+    getLastName(){
+        return this.lastName;
+        
     }
 
-    wearBackpack(){
-
+    getId(){
+        return this.id;
     }
 }
 
@@ -47,12 +48,20 @@ class Animal{
         this.age = age;
     }
 
-    reproduce(){
-
+    getRace(){
+        return this.race;
     }
 
-    eat(){
-
+    getClassification(){
+        return this.classification;
+    }
+    
+    getColor(){
+        return this.color;
+    }
+    
+    getAge(){
+        return this.age;
     }
 }
 
@@ -63,7 +72,13 @@ class Pet extends Animal{
         this.name = name;
     }
 
-    doThings();
+    getOwner(){
+        return this.owner;
+    };
+    
+    getName(){
+        return this.name;
+    }
 }
 
 class Family {
@@ -71,17 +86,13 @@ class Family {
         this.members = members;
         this.lastName = lastName;
     }
-
-    dinner(){
-
+    
+    getMembers(){
+        return this.members;
     }
-
-    hangout(){
-
-    }
-
-    support(){
-
+    
+    getLastName(){
+        return this.lastName;
     }
 }
 
@@ -91,11 +102,11 @@ class Task{
         this.duration = duration;
     }
 
-    do(){
-
+    getTaskName(){
+        return this.name;
     }
-
-    stop(){
-        
+    
+    getDuration(){
+        return this.duration;
     }
 }

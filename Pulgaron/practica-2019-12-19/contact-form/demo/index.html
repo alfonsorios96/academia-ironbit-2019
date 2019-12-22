@@ -6,19 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="module">
         import '../contact-form.js';
-        import '@catsys/contact-card';
     </script>
     <title>ContactForm</title>
 </head>
 <body>
 <contact-form></contact-form>
-<contact-card></contact-card>
 <script>
   const node = document.querySelector('contact-form');
-  node.addEventListener('register-contact-request', event => {
-    const contact = event.detail;
-    const card = document.querySelector('contact-card');
-    card.contact
+  node.addEventListener('register-pokemon-request', event => {
+    console.log(event.detail);
   })
 </script>
 </body>

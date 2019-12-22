@@ -1,0 +1,27 @@
+{
+  "name": "@catsys/phone-component",
+  "version": "1.0.0",
+  "description": "Catsys component generated",
+  "main": "phone-component.js",
+  "keywords": [
+    "lit-element",
+    "component"
+  ],
+  "author": "autogenered <hello@catsys.com>",
+  "license": "MIT",
+  "scripts": {
+    "karma": "karma",
+    "test": "karma start"
+  },
+  "dependencies": {
+    "@material/top-app-bar": "^4.0.0",
+    "lit-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@open-wc/testing": "^0.9.11",
+    "@open-wc/testing-karma": "^0.4.7"
+  }
+}
