@@ -2,9 +2,21 @@ import { html, LitElement } from 'lit-element';
 import style from './player-component-styles.js';
 import 'music-component/music-component';
 
+/**
+ * `<player-component>` shelter <music-component> and uses a fetch promise to get a song
+ * to see the player in action, just put the player-component tag and play the song
+ * <body>
+ *   <player-component></player-component>
+ * And now u have your player working voalaa
+ * @customElement
+ * @polymer
+ *
+ */
+
 class PlayerComponent extends LitElement {
   static get properties() {
     return {
+      /** gets an url song fot the music component*/
       urlSong: String
     };
   }

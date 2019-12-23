@@ -1,11 +1,25 @@
 import { html, LitElement } from 'lit-element';
 import style from './battery-component-styles.js';
 
+/**
+ * `<battery-component>` creates a battery lvl detector that changes dependes on the battery lvl, also u can
+ * modify the battery lvls.
+ * to see the battery in action, just punt on your body the tag an that's all
+ * <body>
+ *   <battery-component></battery-component>
+ * And now u have your battery working voalaa
+ * @customElement
+ * @polymer
+ *
+ */
+
 
 class BatteryComponent extends LitElement {
   static get properties() {
     return {
+      /** the battery lvl of our battery*/
       batteryLvl: Number,
+      /** wheter our battery is connected or not*/
       charge: Boolean
     };
   }
@@ -31,8 +45,11 @@ class BatteryComponent extends LitElement {
 
       `;
     }
-
+  /** Pass the battery to a parent component for its use*/
     passBattery(){
+      /** @event battery-request
+       *@param {batterylvl} pass the battery lvl!
+       * */
       this.dispatchEvent(new CustomEvent('battery-request',{
         detail:{
           batterylvl: this.batteryLvl
@@ -40,6 +57,7 @@ class BatteryComponent extends LitElement {
       }));
     }
 
+    /** Charge the batterylvl if the charge is connected!*/
     charging(){
       if(this.charge === true){
         if(this.intervaldisCharging !== 0) {
@@ -52,6 +70,7 @@ class BatteryComponent extends LitElement {
       }
     }
 
+  /** Dischrge the batterylvl if the charge is disconnected!*/
     discharging(){
       if(this.charge === false){
         if(this.intervalCharging !== 0) {
@@ -64,6 +83,7 @@ class BatteryComponent extends LitElement {
       }
     }
 
+  /** Toggle the charge to off */
     disconnected(){
       if(this.charge === true){
         this.charge = false;
@@ -73,7 +93,7 @@ class BatteryComponent extends LitElement {
         }
       }
 
-
+  /** Toggle the charge to on */
     connected(){
       if(this.charge === false){
         this.charge = true;

@@ -3,11 +3,21 @@ import style from './phone-component-styles.js';
 import '@catsys/battery-component';
 import '@catsys/player-component';
 
-
+/**
+ * `<phone component>` shelter components to create a phone like enviroment!
+ * to see the phone in action, just put the phone tag and add some components to it an thats all
+ * <body>
+ *   <phone-component></phone-component>
+ * And now u have your phone working voalaa
+ * @customElement
+ * @polymer
+ *
+ */
 class PhoneComponent extends LitElement {
   static get properties() {
     return {
-      hello: { type: String }
+      /** here recoieves the batterylvl of th ebattery-component and made use of it to charge and discharge */
+      batteryLvl: Number
     };
   }
 
@@ -32,6 +42,7 @@ class PhoneComponent extends LitElement {
       `;
     }
 
+    /** Gets the battery of  <battery-component>*/
     getBattery(){
       const battery = document.querySelector('battery-component')
 
@@ -39,7 +50,7 @@ class PhoneComponent extends LitElement {
         this.batteryLvl = event.detail;
     });
     }
-
+  /** plays a song if the batterylvl is more than 10%*/
     play(){
       this.getBattery();
       if(this.batteryLvl > 10){
