@@ -16,6 +16,13 @@ export default css`
   flex-direction: column;
 }
 
+.card-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #form1{
   display: flex;
   justify-content: center;

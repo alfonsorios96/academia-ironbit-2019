@@ -4,6 +4,7 @@ import '@vaadin/vaadin-button/vaadin-button.js';
 import '@vaadin/vaadin-text-field/vaadin-text-field';
 import '@vaadin/vaadin-select/vaadin-select.js';
 import '@vaadin/vaadin-date-picker/vaadin-date-picker.js';
+import '@polymer/paper-card/paper-card.js'; 
 
 class IbEmployeeRegisterForm extends LitElement {
   static get properties() {
@@ -19,6 +20,7 @@ class IbEmployeeRegisterForm extends LitElement {
 
   constructor() {
     super();
+    this.title = '';
   }
 
   render() {
