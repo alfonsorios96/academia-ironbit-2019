@@ -44,7 +44,6 @@ class BatteryComponent extends LitElement {
    
   }
   charging(){
-    console.log(`Inside charging ${this.level}`)
     if(this.onCharging === true){
       this.level +=1;
       this.batteryStatus();
