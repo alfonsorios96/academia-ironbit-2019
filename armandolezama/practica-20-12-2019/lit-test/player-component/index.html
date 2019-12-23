@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="module">
+        import './src/player-component.js'
+    </script>
+</head>
+<body>
+    <player-component></player-component>
+    <script>
+    const player = document.querySelector('player-component');
+    player.addEventListener('player-playing', () => {
+        console.log('Estás oyendo unas rolas')
+    })
+    player.addEventListener('player-paused', () => {
+        console.log('Dejaste de oír rolas')
+    })
+    </script>
+</body>
+</html>

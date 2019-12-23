@@ -1,0 +1,23 @@
+
+af
+/*  
+Crear el diagrama de clase de una sistema de horarios para una 
+escuela que me permita asignar a los empleados a un horario de acuerdo a sus horas disponibles, 
+al igual que administrar las clases que se puedan dar de acuerdo a las horas asignadas del profesor,
+ dentro del sistema, ningún profesor podrá dar una clase al mismo tiempo que otra. El sistema debe
+  poder asignar horas a los administrativos de la escuela (tiempo máximo 8 horas), y debe de asignar
+   según el puesto sus asignaciones. Los Profesores por contrato recibiran un bono por cada 10 hrs de clases. 
+   Los profesores por plaza, tendrán una hora libre extra por cada 5 años de antiguedad (esta se restará a sus horas asignadas).
+Realizar el código de js para poder generar los horarios dinamicamente de acuerdo a la cantidad de empleados ingresados. 
+(Generar las tareas de forma aleatoria para completar las horas de los empleados).
+Asignaciones por empleado.
+Pofesores Plaza - 50 hrs.(35 de clases, 15 libres)
+Profesores Contrato - 20 hrs.(15 de clases, 5 libres)
+Administrativos - 45 hrs (40 labores administrativos, juntas, 5 libres)
+
+Tareas.
+Clases - 1 hrs
+Recesos - 1 hrs.
+Juntas - 3 hrs
+Labores administrativos - 4 hrs.
+*/
