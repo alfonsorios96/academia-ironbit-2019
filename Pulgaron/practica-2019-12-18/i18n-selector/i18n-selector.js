@@ -28,7 +28,7 @@ class I18nSelector extends LitElement {
 							<vaadin-item value="en">Inglés</vaadin-item>
 							<vaadin-item value="fr">Francés</vaadin-item>
 						</vaadin-list-box>
-          </template>   
+          </template>
         </vaadin-select>
         <vaadin-button @click="${this.showLanguage}">Aceptar</vaadin-button>
       `;
@@ -42,8 +42,7 @@ class I18nSelector extends LitElement {
 
     showLanguage(){
       const lg = this.shadowRoot.querySelector('#lg').value;
-      var map = new Map(Object.entries(this.languages[lg]));
-      console.log(map);
+      const map = new Map(Object.entries(this.languages[lg]));
 
       this.dispatchEvent(new CustomEvent('language-request', {
         detail: map
