@@ -1,0 +1,17 @@
+{
+  "name": "inicio",
+  "version": "1.0.0",
+  "description": "'Primeros ejercicios para lit, mi primer componente'",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Danno Danny",
+  "license": "ISC",
+  "dependencies": {
+    "@polymer/paper-card": "^3.0.1",
+    "@vaadin/vaadin-button": "^2.2.1",
+    "@vaadin/vaadin-text-field": "^2.5.3",
+    "lit-element": "^2.2.1"
+  }
+}

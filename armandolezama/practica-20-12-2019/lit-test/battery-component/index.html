@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="module">
+        import './src/battery-component.js'
+    </script>
+</head>
+<body>
+    
+    <battery-component></battery-component>
+    
+    <h2>Battery Charge from event is </h2>
+    <p id="battery-charge"></p>
+    <button id="charge">Carga</button>
+    <button id="disconnected">Deja de cargar</button>
+    <button id="discharging">Descarga</button>
+    <button id="stop-discharging">Deja de descargar</button>
+    <script>
+        const charge = document.querySelector('#charge') 
+        const disconnected = document.querySelector('#disconnected') 
+        const discharging = document.querySelector('#discharging') 
+        const stopDischarging = document.querySelector('#stop-discharging')
+        const batteryComponent = document.querySelector('battery-component')
+        const batteryChargeP = document.querySelector('#battery-charge')
+        
+        charge.addEventListener('click', ()=>{
+            batteryComponent.charge();
+        })
+        disconnected.addEventListener('click', () => {
+            batteryComponent.stopCharge();
+        })
+        discharging.addEventListener('click', () => {
+            batteryComponent.discharge();
+        })
+        stopDischarging.addEventListener('click', () => {
+            batteryComponent.stopDischarge();
+        } )
+        batteryComponent.addEventListener('battery-status', event => {
+            console.log(event.detail)
+        })
+        batteryComponent.addEventListener('charging', () => {
+            console.log('is Charging')
+        })
+        batteryComponent.addEventListener('disconnected', () => {
+            console.log('is Disconnected')
+        })
+        batteryComponent.addEventListener('discharging', () => {
+            console.log('is Discharging')
+        })
+        batteryComponent.addEventListener('stop-discharging', () => {
+            console.log('is stopped battery consume')
+        })
+    </script>
+</body>
+</html>

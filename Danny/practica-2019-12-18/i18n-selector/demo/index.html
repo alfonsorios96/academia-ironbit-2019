@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../i18n-selector.js';
+        import '../node_modules/@vaadin/vaadin-text-field/vaadin-text-field';
+        import '../node_modules/@vaadin/vaadin-select/vaadin-select';
+        import '../node_modules/@vaadin/vaadin-button/vaadin-button';
+        
+    </script>
+    <title>I18nSelector</title>
+    <style>
+    
+    .container {
+            width: 1200px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            }
+    </style>
+    <script>
+        const lang = { 
+                        es:{
+                            nameLanguage: 'Español',
+                            title:'Hola Que haces '
+                        },
+                        en:{
+                            nameLanguage: 'Ingles',
+                            title:'Hola Que haces '
+                        }
+                    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <main>
+                
+                <i18n-selector .data="lang"></i18n-selector>
+                <p id="title"> ffsfasf</p>
+        </main>
+        
+    </div>
+
+   
+</body>
+</html>
