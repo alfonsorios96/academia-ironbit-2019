@@ -1,4 +1,4 @@
-class Empleado {
+class Employee {
     constructor(name, availableTime, unavailableTime) {
         Object.defineProperty(this, 'name', {value: name, writable: false});
         Object.defineProperty(this, 'availableTime', {value: availableTime, writable: false});
@@ -10,4 +10,4 @@ class Empleado {
     }
 }
 
-export default Empleado;
+export default Employee;
