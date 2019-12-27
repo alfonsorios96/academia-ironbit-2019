@@ -1,9 +1,7 @@
-// ----------- Variables Globales -------------
 const empty = [];
 const single = [{name: 'Bart'}];
 const several = [{name: 'Lisa'}, {name: 'Maggie'}, {name: 'Homer'}, ];
 
-// ----------- Propuesta 1 -------------
 function list(names) {
     const totalNames = [];
 
@@ -18,7 +16,3 @@ function list(names) {
 
     return `${initialNames}, ${lastTwoNames}`;
 }
-
-console.log(list(empty));
-console.log(list(single));
-console.log(list(several));

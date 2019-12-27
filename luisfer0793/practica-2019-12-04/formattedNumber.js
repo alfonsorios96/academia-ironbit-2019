@@ -1,5 +1,3 @@
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-
 function createPhoneNumber(numbers){
     return numbers.reduce((accumulator, currentValue, index) => {
         if (index === 0) return `${accumulator}(${currentValue}`;
@@ -9,6 +7,3 @@ function createPhoneNumber(numbers){
         return `${accumulator}${currentValue}`;
     }, "");
 }
-const format = createPhoneNumber(numbers);
-
-console.log(format);
