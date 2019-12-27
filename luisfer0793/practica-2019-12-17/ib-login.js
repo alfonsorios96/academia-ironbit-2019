@@ -6,7 +6,6 @@ import '@vaadin/vaadin-text-field/vaadin-password-field.js';
 import '@vaadin/vaadin-button/vaadin-button.js';
 
 export class IBLogin extends LitElement {
-    // En el constructor es donde se declaran las propiedades del elemento. (Equivalente a "state" en React).
     constructor() {
         super();
         this.logo = "";
@@ -14,7 +13,6 @@ export class IBLogin extends LitElement {
         this.password = "1234";
     }
 
-    // Para agregar estilos creamos un metodo estático que devuelva un String con los estilos personalizados.
     static get styles() {
         return css`
             .container {
@@ -31,7 +29,6 @@ export class IBLogin extends LitElement {
         `;
     }
 
-    // Metodo para devolver las propiedades.
     static get properties() {
         return {
             logo: String,
