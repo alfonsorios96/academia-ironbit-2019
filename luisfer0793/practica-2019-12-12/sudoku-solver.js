@@ -10,11 +10,5 @@ const puzzle = [
     [3, 4, 5, 2, 8, 6, 1, 7, 9]
 ];
 
-// Para determinar si un número es válido dentro del row se debe de cumplir lo siguiente.
-// No debe de existir ese numero dentro del ROW.
-// No debe existir ese número dentro del GRID.
-// No debe existir ese número dentro del COLUMN.
 let contador = 0;
 const columns = puzzle.map((row, index) => index === contador && index < 9 ? [].concat(row[index]) : null);
-
-console.log(columns);
