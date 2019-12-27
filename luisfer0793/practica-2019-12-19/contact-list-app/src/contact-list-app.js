@@ -1,13 +1,11 @@
 import {LitElement, html} from 'lit-element';
 
-// These are the elements needed by this element.
 import {styles} from './contact-list-styles.js';
 import { fadeInTransitionPage } from './utils/contact-list-transitions.js';
 
 import './pages/default-page.js';
 import './pages/home-page.js';
 import '@polymer/paper-button/paper-button.js';
-// import {menuIcon} from './utils/contact-list-icons.js';
 
 class ContactList extends LitElement {
   static get properties() {

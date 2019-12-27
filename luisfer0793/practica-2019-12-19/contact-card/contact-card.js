@@ -1,22 +1,15 @@
 import { html, LitElement, css } from 'lit-element';
 import style from './contact-card-styles.js';
 import '@polymer/paper-card/paper-card.js';
-// import '@polymer/paper-button/paper-button.js';
+import '@polymer/paper-button/paper-button.js';
 
-class ContactCard extends LitElement {
-    static get properties() {
-        return {
-            hello: { type: String }
-        };
-    }
-    
+class ContactCard extends LitElement {    
     static get styles() {
         return style;
     }
     
     constructor() {
         super();
-        this.hello = 'Hello';
     }
     
     render() {

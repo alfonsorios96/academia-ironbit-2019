@@ -2,19 +2,12 @@ import { html, LitElement } from 'lit-element';
 import style from './contact-form-styles.js';
 
 class ContactForm extends LitElement {
-  static get properties() {
-    return {
-      hello: { type: String }
-    };
-  }
-
   static get styles() {
     return style;
   }
 
   constructor() {
     super();
-    this.hello = 'Hello';
   }
 
   render() {
