@@ -9,19 +9,12 @@ import '@vaadin/vaadin-select/vaadin-select.js';
 import '@vaadin/vaadin-button/vaadin-button.js';
 
 class IbEmployeeRegisterForm extends LitElement {
-    static get properties() {
-        return {
-          hello: { type: String }
-        };
-    }
-
     static get styles() {
         return style;
     }
 
     constructor() {
         super();
-        this.hello = 'Hello';
     }
 
     render() {
