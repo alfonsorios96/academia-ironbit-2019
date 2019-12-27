@@ -49,7 +49,6 @@ body {
 }
 
 .movie {
-    /* display: flex; */
     text-align: center;
     border: .1rem solid #c2c2c2;
 }

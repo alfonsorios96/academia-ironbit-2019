@@ -1,8 +1,6 @@
-// Botones.
 const [moviesBtn, usersBtn, newUserBtn] = document.querySelectorAll('.button');
 const grid = document.getElementById('grid');
 
-// Llamada fetch con el metodo HTTP - GET
 moviesBtn.addEventListener('click', event => {
     fetch('http://localhost:3000/movies')
         .then(response => response.json())
@@ -13,17 +11,16 @@ moviesBtn.addEventListener('click', event => {
                 <p>${movie.description}</p>
             </div>
         `)))
-        .catch(error => console.log(error))
+        .catch(error => alert(error))
 });
 
 usersBtn.addEventListener('click', event => {
     fetch('http://localhost:3000/users')
         .then(data => data.json())
-        .then(users => users.forEach(user => console.log(user)))
-        .catch(error => console.log(error))
+        .then(users => users.forEach(user => alert(user)))
+        .catch(error => alert(error))
 });
 
-// Fetch, recibe una URL y un elemento objet opcional.
 const newObj = {
     "id": 1,
     "username": "example",
@@ -39,10 +36,9 @@ const options = {
     }
 };
 
-// Tal object será una colección de opciones qye debe cumplir la llamada a la URL.
 newUserBtn.addEventListener('click', event => {
     event.preventDefault();
     fetch('http://localhost:3000/users', options)
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
+        .then(response => alert(response))
+        .catch(error => alert(error))
 });
