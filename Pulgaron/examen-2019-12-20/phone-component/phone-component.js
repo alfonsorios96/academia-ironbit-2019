@@ -50,13 +50,6 @@ class PhoneComponent extends LitElement {
         this.batteryLvl = event.detail;
     });
     }
-  /** plays a song if the batterylvl is more than 10%*/
-    play(){
-      this.getBattery();
-      if(this.batteryLvl > 10){
-          this.shadowRoot.querySelector('battery-request')
-      }
-    }
 }
 
 window.customElements.define("phone-component", PhoneComponent);

@@ -11,7 +11,7 @@ import '@polymer/paper-dialog/paper-dialog.js';
 class IbEmployeeRegisterForm extends LitElement {
   static get properties() {
     return {
-      hello: { type: String }
+      
     };
   }
 
