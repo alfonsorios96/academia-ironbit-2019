@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../contact-card.js';
+    </script>
+    <title>ContactCard</title>
+</head>
+<body>
+<contact-card></contact-card>
+<script>
+  const node = document.querySelector('contact-card');
+  node.pokemon = {
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png',
+    name: 'Ditto',
+    experience: 109,
+    height: 3,
+    id: 132,
+    weight: 40,
+    gender: 'unknown'
+
+  }
+
+
+</script>
+</body>
+</html>

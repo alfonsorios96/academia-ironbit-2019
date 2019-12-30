@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/ProjectElementlLit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/ProjectElementlLit/dashboard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/ProjectElementlLit/dashboard/dashboard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/ProjectElementlLit/razon-social" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/ProjectElementlLit/subcuentas" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/examen-2019-12-20/battery-component" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/examen-2019-12-20/phone-component" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/examen-2019-12-20/player-component" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/practica-2019-12-19/contact-card" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/practica-2019-12-19/contact-form" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pulgaron/projectLit" vcs="Git" />
+  </component>
+</project>

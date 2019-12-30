@@ -1,20 +1,19 @@
 import {LitElement, html} from 'lit-element';
 
 // These are the elements needed by this element.
-import {styles} from './contact-list-styles.js';
-import { fadeInTransitionPage } from './utils/contact-list-transitions.js';
+import {styles} from './pokedex-styles.js';
+import { fadeInTransitionPage } from './utils/pokedex-transitions.js';
 
-import './pages/list-page.js';
-import './pages/create-page.js';
+import './pages/default-page.js';
+import './pages/home-page.js';
 import '@polymer/paper-button/paper-button.js';
-// import {menuIcon} from './utils/contact-list-icons.js';
+// import {menuIcon} from './utils/pokedex-icons.js';
 
-class ContactList extends LitElement {
+class Pokedex extends LitElement {
   static get properties() {
     return {
       appTitle: {type: String},
-      _page: {type: String},
-      contacts: Array
+      _page: {type: String}
     };
   }
 
@@ -23,29 +22,6 @@ class ContactList extends LitElement {
           styles,
           fadeInTransitionPage
         ];
-    }
-
-    firstUpdated() {
-      fetch('https://randomuser.me/api/?results=10')
-        .then(response => response.json())
-        .then(data => {
-          this.contacts = data.results.map(user => {
-            return {
-              name: user.name.first,
-              lastName: user.name.last,
-              phone: user.phone,
-              gender: user.gender,
-              address: user.location.street.name,
-              email: user.email,
-              nss: user.id.value,
-              rfc: data.info.seed,
-              bloodType: 'o+',
-              curp: data.info.seed,
-              image: user.picture.large,
-              skills: []
-            };
-          });
-        });
     }
 
   render() {
@@ -61,20 +37,20 @@ class ContactList extends LitElement {
           Catsys (beta)
         </div>
         <nav class="navbar-principal">
-          <paper-button @click="${this.changePage}" page="list">Lista de contactos</paper-button>
-          <paper-button @click="${this.changePage}" page="create">Nuevo contacto</paper-button>
+          <paper-button @click="${this.changePage}" page="home">Home</paper-button>
+          <paper-button @click="${this.changePage}" page="default">More</paper-button>
         </nav>
       </header>
       <!-- Main content -->
       <main role="main" class="container-app main-app">
         ${
-            this._page === 'create' ?
-              html`<create-page class="page" active @new-contact="${this.createContact}"></create-page>` :
+            this._page === 'home' ?
+              html`<home-page class="page" active ></home-page>` :
               ''
         }
         ${
-          this._page === 'list' ?
-            html`<list-page class="page" active .pokemon="${this.pokemon}"></list-page>` :
+          this._page === 'default' ?
+            html`<default-page class="page" active></default-page>` :
             ''
         }
       </main>
@@ -92,8 +68,7 @@ class ContactList extends LitElement {
 
   constructor() {
     super();
-    this.contacts = [];
-    this._page = 'list';
+    this._page = 'home';
     this._config = {
       type: 'app',
       transition: {
@@ -101,10 +76,6 @@ class ContactList extends LitElement {
         delay: 300
       }
     }
-  }
-
-  createContact(event) {
-    this.contacts = [...this.contacts, event.detail];
   }
 
   changePage(event) {
@@ -123,4 +94,4 @@ class ContactList extends LitElement {
   }
 }
 
-window.customElements.define('contact-list-app', ContactList);
+window.customElements.define('pokedex-app', Pokedex);

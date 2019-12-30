@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../contact-form.js';
+    </script>
+    <title>ContactForm</title>
+</head>
+<body>
+<contact-form></contact-form>
+<script>
+  const node = document.querySelector('contact-form');
+  node.addEventListener('register-pokemon-request', event => {
+    console.log(event.detail);
+  })
+</script>
+</body>
+</html>
