@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../blog-component.js';
+    </script>
+    <title>BlogComponent</title>
+</head>
+<body>
+    
+        <blog-component></blog-component>
+
+        <script>
+            const blogComponent = document.querySelector('blog-component');
+            blogComponent.blogList = [{
+            date: new Date(),
+            title: 'Article title',
+            body: 'Details about article',
+            author: 'Author'
+        },
+        {
+            date: new Date(),
+            title: 'Article title',
+            body: 'Details about article 2',
+            author: 'Author'
+        },
+        {
+            date: new Date(),
+            title: 'Article title',
+            body: 'Details about article 3',
+            author: 'Author'
+        }];
+        </script>
+    
+</body>
+</html>
