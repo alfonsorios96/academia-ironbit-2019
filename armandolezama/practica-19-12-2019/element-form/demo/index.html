@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../element-form.js';
+    </script>
+    <title>ElementForm</title>
+</head>
+<body>
+    <style>
+    </style>
+    <div class="card">
+        <div class="circle">1</div>
+        <element-form></element-form>
+    </div>
+    <script>
+        const elementForm = document.querySelector('element-form')
+        elementForm.addEventListener('sent-info', event => {console.log(event.detail)})
+    </script>
+</body>
+</html>
