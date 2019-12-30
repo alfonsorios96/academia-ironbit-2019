@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../create-entry.js';
+    </script>
+    <title>CreateEntry</title>
+</head>
+<body>
+    <style>
+    </style>
+    <create-entry></create-entry>
+
+    <script>
+        const entry = document.querySelector('create-entry')
+        entry.addEventListener('create-entry', event => {
+            console.log(event.detail);
+        });
+    </script>
+</body>
+</html>

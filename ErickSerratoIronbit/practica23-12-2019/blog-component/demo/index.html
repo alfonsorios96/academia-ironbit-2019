@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../blog-component.js';
+    </script>
+    <title>BlogComponent</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <blog-component></blog-component>
+
+    <script>
+        const blogComponent = document.querySelector('blog-component');
+        blogComponent.blogList = [
+            {date : new Date(),
+            title : 'Artice ironbit tittle',
+            body : 'Details about article',
+            author : 'Autor of article'
+            },
+            {
+            date : new Date(),
+            title : 'Artice ironbit tittle',
+            body : 'Details about article 2',
+            author : 'Autor of article'
+            },
+            {
+            date : new Date(),
+            title : 'Artice ironbit tittle',
+            body : 'Details about article 3',
+            author : 'Autor of article'
+            }
+        ]
+    </script>
+    
+</body>
+</html>
