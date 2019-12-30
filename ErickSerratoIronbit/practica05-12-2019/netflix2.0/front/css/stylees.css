@@ -1,0 +1,135 @@
+
+body {
+  background-repeat: no-repeat, repeat;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#navegador ul{
+  list-style-type: none;
+  text-align: left;
+  color: white;
+}
+
+#navegador li{
+  display: inline;
+  text-align: left;
+  margin: 0 10px 0 0;
+  color: white;
+}
+
+
+.headernetflix {
+  overflow: hidden;
+  background-color:#00000000;
+  padding: 20px 10px;
+}
+
+.headernetflix a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.headernetflix a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.headernetflix a:hover {
+  background-color: black;
+  color: black;
+}
+
+.centertextnet{
+  text-align:center;
+  color: white;
+}
+
+.modalnetflix-titlenetflix {
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: white;
+
+}
+
+
+.modalnetflix-contentnetflix {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #000000;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.headernetflix a.activenetflix {
+  background-color: red;
+  color: white;
+  width: 120px;
+  height: 20px;
+  font: condensed 120% sans-serif;
+  margin: 5px;
+}
+
+.tittle1 {
+  color: white;
+  width: 120px;
+  height: 20px;
+  font: condensed 120% sans-serif;
+  margin: 5px;
+  text-align: center;
+}
+
+.tittle2 {
+  color: white;
+  width: 120px;
+  height: 20px;
+  font: condensed 120% sans-serif;
+  margin: 5px;
+  text-align: center;
+}
+
+
+.buttonindex{
+  background-color: red;
+  color: white;
+  width: 220px;
+  height: 20px;
+  font: condensed 120% sans-serif;
+  margin: 5px;
+  align-items: center;
+}
+
+.headernetflix-right {
+  float: right;
+}
+.logo{
+  width: 250px; height: 70px ; margin: 5px; 
+}
+
+@media screen and (max-width: 500px) {
+  .headernetflix a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .headernetflix-right {
+    float: none;
+  }
+}
