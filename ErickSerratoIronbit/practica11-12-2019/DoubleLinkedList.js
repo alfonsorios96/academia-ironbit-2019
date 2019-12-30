@@ -12,7 +12,6 @@ constructor(){
   this. currentNode = null;
 
 }
-// agregar borrar 
 
   add (data, prev=null, next= null ){
     const node = new Node (data);

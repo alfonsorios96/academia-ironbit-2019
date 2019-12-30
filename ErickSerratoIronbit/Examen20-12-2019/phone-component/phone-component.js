@@ -9,19 +9,6 @@ import '@catsys/battery-component/battery-component.js';
 import '@catsys/player-component/player-component.js';
 
 class PhoneComponent extends LitElement {
-  static get properties() {
-    return {
-
-    };
-  }
-
-  static get styles() {
-    return style;
-  }
-
-  constructor() {
-    super();
-  }
 
   render() {
     return html`

@@ -18,7 +18,7 @@ class I18nSelector extends LitElement {
     }
     return html`
         <p>Language Practice</p>
-        <vaadin-select     id="lenguageselector"  label="Lenguage"   placeholder ="Seleccione">
+        <vaadin-select     id="lenguageselector"  label="Lenguage"  @change="${ this.changeLanguage }"  placeholder ="Seleccione">
           <template>
             <vaadin-list-box>
               ${langs}
@@ -28,7 +28,11 @@ class I18nSelector extends LitElement {
         
       `;
     }
-    
+    changeLanguage(event) {
+      const languageSelected = event.target.value;
+      const languageMap =  new Map(Object.entries(this.langs.get( languageSelected )));
+      this.dispatchEvent(new CustomEvent('i18nEvent', { detail: languageMap }))
+    }
 }
 
 

@@ -1,4 +1,4 @@
-const grid0 = [
+const sudoku = [
   [5, 3, 4, 6, 7, 8, 9, 1, 2],
   [6, 7, 2, 1, 9, 5, 3, 4, 8],
   [1, 9, 8, 3, 4, 2, 5, 6, 7],
@@ -10,7 +10,7 @@ const grid0 = [
   [3, 4, 5, 2, 8, 6, 1, 7, 9]
  ];
  
-const grid1 =[
+const sudoku2 =[
   [1, 2, 3, 4, 5, 6, 7, 8, 9],
   [1, 2, 3, 4, 5, 6, 7, 8, 9],
   [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -68,5 +68,5 @@ const validate= (board)=> {
   return true;
 }
 
-validate (grid0);
-validate (grid1);
+validate (sudoku);
+validate (sudoku2);

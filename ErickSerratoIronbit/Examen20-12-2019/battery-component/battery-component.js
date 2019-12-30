@@ -7,7 +7,10 @@ import '@polymer/iron-icons/device-icons.js';
 class BatteryComponent extends LitElement {
   static get properties() {
     return {
-      charge :Number
+      charge :Number,
+      state:  String ,
+      batteryBars: String,
+      connected: Boolean
     };
   }
 
@@ -17,7 +20,11 @@ class BatteryComponent extends LitElement {
 
   constructor() {
     super();
-
+    this.state = 'medium';
+    this.batteryBars = '';
+    this.connected = false;
+    this.chargue = null; 
+    this.dischargue = null;
     this.charge = 100;
     
 
@@ -34,11 +41,44 @@ class BatteryComponent extends LitElement {
 
     chargin(){
 
-
+      this.chargue = setInterval(() => {
+        if (this.porcentage < 100) {
+          this.porcentage = this.porcentage + 1;
+          this.state = 'high';
+          if(this.porcentage <= 60){
+            this.state = 'medium';
+          }
+          if(this.porcentage <= 20){
+            this.state = 'low';
+          }
+          this.launchEvent('charging');
+        }else {
+          clearInterval(this.chargue);
+        }
+        
+      },1000);
+  
+      return this.chargue;
     }
 
     disconnected(){
-
+      this.dischargue = setInterval(() => {
+        if (this.porcentage > 0) {
+          this.porcentage = this.porcentage - 1;
+          this.state = 'low';
+          if(this.porcentage > 20){
+            this.state = 'medium';
+          }
+          if(this.porcentage > 60){
+            this.state = 'high';
+          }
+          this.launchEvent('disconnected');
+        }else {
+          clearInterval(this.dischargue);
+        }
+      },1000);
+  
+      return this.dischargue;
     }
 
 
@@ -46,7 +86,6 @@ class BatteryComponent extends LitElement {
   baterystate(chargevalue){
     let iconbateri = ''
     if(this.charge<10 ){
-     //metodo para pausar la cancion distan > 0  && distan <=2.40
      iconbateri = 'device:battery-20';
     }else{
       if(this.charge >10  && this.charge <=20){
@@ -82,7 +121,14 @@ class BatteryComponent extends LitElement {
     return iconbateri;
   }  
 
-    
+  launchEvent(nameEvent){
+    this.dispatchEvent(new CustomEvent(nameEvent, { 
+      detail: {
+        porcentage: this.porcentage,
+        state: this.state
+      } 
+    }));
+  }
 
 }
 
